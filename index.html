@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Code Review</title>
+    <link rel="stylesheet" href="normalize.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="heading">
+             <h1>The Code Review</h1>
+        </div>
+        <div class="heading2">
+            <h2>Signup for our newsletter</h2>
+            <p>Get the latest news on how your code is doing right in your inbox</p>
+        </div>
+    </header>
+        
+    <main> 
+        <form action="index.html" method="post"> 
+
+            <fieldset class="field">
+                <legend>Contact Information</legend>           
+                
+                <div class="container">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="user_name" placeholder="Required field"> 
+                </div>
+
+                <div class="container">
+                <label for="mail">Email Address</label>
+                <input type="email" id="mail" name="user_email" placeholder="Required field">
+                </div>
+
+                <div class="container">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="user_phone">
+                </div>
+            
+                <div class="container">
+                <label for="address">Street Address</label>
+                <input type="text" id="address" name="user_address"> 
+                </div>
+
+                <div class="container">
+                <label for="city">City</label>
+                <input type="text" id="city" name="user_city"> 
+                </div>
+
+                <div class="container">
+                <label for="state">State</label>
+                <select id="state" name="user_state">
+                    <optgroup label="Region 1">
+                        <option value="state_1">State 1</option>
+                        <option value="state_2">State 2</option>
+                        <option value="state_3">State 3</option>
+                    </optgroup>
+                        <optgroup label="Region 2">
+                        <option value="state_4">State 4</option>
+                        <option value="state_5">State 5</option>
+                        <option value="state_6">State 6</option>
+                    </optgroup>
+                </select> 
+                </div>
+
+                <div class="container">
+                <label for="zip">Zip Code</label>
+                <input type="text" id="zip" name="user_zipcode">
+                </div>
+                
+            </fieldset>
+
+            <fieldset>
+                <legend>Newsletter</legend>           
+
+                <label>Select the newsletter you would like to receive</label><br> 
+                <input type="checkbox" id="news_html" value="interest_HTML" name="user_interest"><label for="news_html">HTML News</label><br> 
+                <input type="checkbox" id="news_CSS" value="interest_CSS" name="user_interest"><label for="news_CSS">CSS News</label><br> 
+                <input type="checkbox" id="news_java" value="interest_java" name="user_interest"><label for="news_java">Javascrpt News</label><br><br>  
+
+                <label>Newsletter format</label><br> 
+                <input type="radio" id="HTML" value="HTML" name="user_format"><label for="HTML">HTML</label><br>
+                <input type="radio" id="plain_text" value="plain_text" name="user_format"><label for="plain_text">Plain text</label><br> <br> 
+                <!--kuna "name" on sama, siis ta ei lase korraga mõlemat valida -->
+                <label for="other">Other topics you'd like to hear about</label>
+                <textarea id="other" name="user_other"></textarea>
+                
+                <button type="submit">Sign Up</button>
+            </fieldset>
+        </form>        
+    </main>
+
+    <footer>
+        <p>Copyright The Code Review</p>
+    </footer>
+
+</body>
+</html>

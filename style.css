@@ -1,0 +1,227 @@
+/* ================================= 
+  Base Styles
+==================================== */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+
+body {
+     font-family: 'Ubuntu', sans-serif;
+     color: #2d3945;
+     line-height: 1.4;
+     margin: auto;
+     background: #ffffff;
+    }
+
+h1,
+h2 {
+    margin: 0; 
+
+}
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2d3945;
+    color: #ffffff;
+    height: 80px;
+}
+
+.heading2 {
+    display: flex; 
+    flex-direction: column; 
+    margin: 30px 0 30px 0;
+    align-items: center;
+}
+
+label,
+p {
+  color: #929eaa;  
+}
+
+header::after {
+    content: "";
+    display: block;
+    background: #2d3945;
+    height: 5px;  
+    margin-right: 1.5em;
+    margin-left: 1.5em; 
+}
+
+main::before {
+    content: "";
+    display: block;
+    background: #2d3945;
+    height: 2px; 
+    margin-top:5px;
+    margin-right: 1.5em;
+    margin-left: 1.5em;
+}
+
+.field::after {
+    content: "";
+    display: block;
+    background: #2d3945;
+    height: 2px;  
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* ================================= 
+  Form Layout Styles
+==================================== */
+
+
+/* ---- Layout Containers & Elements ---- */
+
+
+.field .container {
+    display: flex;
+    flex-direction: column; 
+}
+
+#zip {
+max-width: 50%;
+}
+
+form {
+padding-top: 20px; 
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    height: 50px;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+}
+  
+textarea  {
+    height: 100px; 
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+  
+input::placeholder {
+    color:#8a97a0;
+    padding-right: 3px; 
+    font-size: 1em;
+    font-style: italic;
+    text-align: right;
+}
+
+textarea:focus, 
+input:focus,
+select:focus {
+    border: 2px solid;
+    border-color: #46698b;
+}
+  
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+  
+button {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    background-color: #4ebbb5;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #4ebbb5;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    margin-bottom: 5px;
+    cursor: pointer; 
+}
+  
+fieldset {
+    margin-bottom: 20px;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    border: none;
+}
+
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+  
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+  
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+  
+
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+
+/* ---- Media min-width 768 ---- */
+
+@media (min-width: 768px) {
+     
+.field .container {
+        flex-direction: row; 
+}    
+
+.field input,
+.field select {
+    flex-grow: 1;
+    flex-basis: 75%;
+}
+
+.field label {
+    flex-basis: 25%; 
+    height: 50px; 
+    margin: auto 0; 
+}
+
+#zip {
+    max-width: 25%; 
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+}
+
+header::after {
+    max-width: calc(700px - 3em);
+    margin: auto;
+}
+}
